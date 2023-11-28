@@ -1,0 +1,40 @@
+.character-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Ajusta según sea necesario para el espacio entre las cartas */
+}
+
+.character-card {
+  background-color: #e5e5e5;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  width: 200px;
+}
+
+.character-card:hover {
+  transform: scale(1.05);
+}
+
+.character-card img {
+  border-radius: 50%;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.character-card h3 {
+  color: #333;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.character-card p {
+  color: #666;
+  font-size: 1rem;
+  margin: 5px 0;
+}
