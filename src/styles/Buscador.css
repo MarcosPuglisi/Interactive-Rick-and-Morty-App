@@ -1,0 +1,25 @@
+.buscador-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+.input-busqueda {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+  
+.boton-buscar {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+ .button:hover {
+    background-color: #0056b3;
+  }
