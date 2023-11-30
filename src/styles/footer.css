@@ -1,0 +1,20 @@
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .social-links a {
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  
+  .social-links img {
+    width: 30px; /* Ajusta el tamaño según tus necesidades */
+    height: 30px;
+  }
+
+  .h5{
+    font-family: 'Freckle Face', cursive;;
+    color: rgb(65, 172, 58);
+  }

@@ -12,3 +12,8 @@
   .h1 {
     font-family: 'Freckle Face', cursive;;
   }
+
+  .h2 {
+    font-family: 'Freckle Face', cursive;;
+    padding: 8px;
+  }

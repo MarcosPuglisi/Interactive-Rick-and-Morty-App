@@ -6,7 +6,7 @@ const Header = () => {
     return (
       <header className="header">
         <h1>Character Collector</h1>
-        <p>Welcome to the interactive world of rick and morty</p>
+        <p>Welcome to the interactive world of Rick and Morty</p>
       </header>
     );
   };

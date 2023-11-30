@@ -38,3 +38,26 @@
   font-size: 1rem;
   margin: 5px 0;
 }
+
+.boton-details{
+  padding: 10px 20px; /* Ajusta el relleno según sea necesario */
+  font-size: 16px; /* Tamaño de fuente */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  background-color: #4CAF50; /* Color de fondo del botón */
+  color: white; /* Color del texto */
+  border: none; /* Elimina el borde del botón */
+  border-radius: 5px; /* Añade bordes redondeados */
+  transition: background-color 0.3s ease;
+}
+
+.details-favorites-container{
+
+}
+
+.details-container{
+
+}
+
+.favorites-container{
+  
+}
