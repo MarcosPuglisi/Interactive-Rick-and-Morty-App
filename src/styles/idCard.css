@@ -1,5 +1,6 @@
 .details-favorites-container {
   display: flex;
+  gap: 20px;
 }
 
 .details-container {
@@ -16,20 +17,22 @@
 }
 
 .details-container img {
-  max-width: 150px;
+  max-width: 200px;
+  height: 300px;
   border-radius: 4px;
-  margin-right: 20px;
+  margin-right: 100px;
 }
 
 .details-container div {
   display: flex;
   flex-direction: column;
+  text-align: left;
 }
 
 .details-container p {
   margin: 8px 0;
   font-family: 'Helvetica Neue', sans-serif;
-  font-size: 18px;
+  font-size: 17px;
 }
 
 .details-container p b {
@@ -37,7 +40,6 @@
 }
 
 .boton-favorite{
-  background-color: #ff4081; /* Color de fondo */
   color: #fff; /* Color del texto */
   border: none;
   padding: 10px 15px;
