@@ -1,3 +1,12 @@
+.ecommerce-main{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.footer {
+  margin-top: auto;
+}
+
 .social-links {
     display: flex;
     align-items: center;
@@ -10,11 +19,22 @@
   }
   
   .social-links img {
-    width: 30px; /* Ajusta el tamaño según tus necesidades */
+    width: 30px;
     height: 30px;
   }
 
-  .h5{
+.h5{
     font-family: 'Freckle Face', cursive;;
     color: rgb(65, 172, 58);
   }
+
+  .h5:hover {
+    transform: scale(1.05);
+  }
+
+  .footer-icons {
+    margin-left: 8px;
+    font-size: 20px; 
+  }
+
+  

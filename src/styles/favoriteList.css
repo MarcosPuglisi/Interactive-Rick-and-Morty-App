@@ -25,3 +25,14 @@
   font-weight: bold; 
   flex-direction: column;
 }
+
+.remove-icon {
+  cursor: pointer;
+  margin-left: 8px;
+  font-size: 20px; 
+  transition: color 0.3s ease;
+}
+
+.remove-icon:hover {
+  color: #af2424; /* Cambia el color cuando el mouse se acerca */
+}

@@ -31,6 +31,13 @@ const ApiComponent = () => {
     setSelectedCharacter(character);
   };
 
+  const handleRemoveFavorite = (characterToRemove) => {
+    const updatedFavorites = favorites.filter(
+      (character) => character.id !== characterToRemove.id
+    );
+    setFavorites(updatedFavorites);
+  };
+
   const indexOfLastCharacter = currentPage * charactersPerPage;
   const indexOfFirstCharacter = indexOfLastCharacter - charactersPerPage;
   const currentCharacters = characters.slice(indexOfFirstCharacter, indexOfLastCharacter);
@@ -94,7 +101,7 @@ const ApiComponent = () => {
             </div>
           </div>
           <div className='favorites-container'>
-          <FavoritesList favorites={favorites} />
+          <FavoritesList favorites={favorites} onRemoveFavorite={handleRemoveFavorite} />
           </div>
         </div>
       )}

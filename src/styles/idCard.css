@@ -47,8 +47,9 @@
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease; /* Efecto de transición */
+  background-color: #0a3406; 
 }
 
-.boton-favorite{
-  background-color: #0a3406; /* Color de fondo al pasar el ratón por encima */
+.boton-favorite:hover {
+  transform: scale(1.05);
 }

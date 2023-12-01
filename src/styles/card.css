@@ -50,14 +50,8 @@
   transition: background-color 0.3s ease;
 }
 
-.details-favorites-container{
-
-}
-
-.details-container{
-
-}
-
-.favorites-container{
-  
+.movie-icons{
+  margin-left: 175px;
+  font-size: 200px; 
+  cursor: pointer;
 }
