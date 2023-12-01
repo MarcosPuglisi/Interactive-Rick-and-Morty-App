@@ -16,7 +16,9 @@ function Body() {
           <div>
             <h2 className='h2'> Characters </h2>
             <span className='footer-icons'>
-              <i className="fab fa-youtube"></i>
+              <i className="fas fa-user"></i>
+              <i className="fas fa-user"></i>
+              <i className="fas fa-user"></i>
             </span>
           </div>
         </div>
