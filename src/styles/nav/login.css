@@ -1,0 +1,91 @@
+.login-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login-content {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 300px; /* Ancho del contenedor */
+    max-width: 80%; /* Ancho máximo para que sea responsivo */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 20px; /* Aumenta el espacio interno del contenedor */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+    border-radius: 10px; /* Agrega esquinas redondeadas */
+  }
+  
+  .login-buttons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px; /* Aumenta el espacio entre las etiquetas y las entradas */
+  }
+  
+  input {
+    width: 100%; /* Hace que el ancho del input sea del 100% del contenedor */
+    padding: 10px; /* Aumenta el espacio interno del input */
+    font-size: 16px; /* Aumenta el tamaño del texto del input */
+    margin-bottom: 10px; /* Aumenta el espacio entre los inputs */
+  }
+  
+  
+  button {
+    padding: 10px 20px; /* Aumenta el espacio interno del botón */
+    font-size: 16px; /* Aumenta el tamaño del texto del botón */
+    padding: 10px 20px;
+    margin-bottom: 10px;
+  }
+
+  .remember-me {
+    display: flex;
+    align-items: center;
+  }
+  
+  .remember-me input {
+    margin: 0; /* Elimina cualquier margen alrededor del checkbox */
+    margin-left: -120px;
+  }
+  
+  .remember-me label {
+    margin-left: -100px; /* Ajusta el espacio entre el checkbox y el texto */
+    margin-bottom: 0; /* Elimina cualquier margen inferior del texto */
+  }
+  .button-login {
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  }
+  .button-cancel {
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  }
+
+  .button-cancel:hover {
+    color: #ff0000;
+    border: 2px solid #ff0000;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .button-login:hover {
+    color: rgb(65, 172, 58);
+    border: 2px solid rgb(65, 172, 58);
+    background-color: rgba(0, 0, 0, 0.1);
+  }

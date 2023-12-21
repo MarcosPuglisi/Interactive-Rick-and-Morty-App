@@ -16,6 +16,19 @@
   align-items: center; /* Alinea verticalmente los elementos del contenedor */
 }
 
+.details-container-video {
+  flex: 2;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to right, rgb(24 96 24), #6ba039, #a6cb49);
+  display: flex;
+  align-items: center; /* Alinea verticalmente los elementos del contenedor */
+}
+
 .details-container img {
   max-width: 200px;
   height: 300px;

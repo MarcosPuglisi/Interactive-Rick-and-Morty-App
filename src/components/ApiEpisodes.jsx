@@ -1,78 +1,93 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/card.css';
 import Pagination from './Pagination';
+import FavoriteListEpisode from './FavoriteListEpisode';
+import '../styles/card.css';
+import '../styles/favoriteList.css';
 
 const ApiEpisodes = () => {
-  const [episodes, setEpisodes] = useState([]);
-  const [charactersToShow, setCharactersToShow] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [detailsContainer, setDetailsContainer] = useState(null);
-  const charactersPerPage = 4; // Número de personajes por página
+  const [episodios, setEpisodios] = useState([]);
+  const [episodiosAMostrar, setEpisodiosAMostrar] = useState([]);
+  const [paginaActual, setPaginaActual] = useState(1);
+  const [detallesContenedor, setDetallesContenedor] = useState(null);
+  const [favoritos, setFavoritos] = useState([]);
+  const episodiosPorPagina = 4; // Número de episodios por página
 
   useEffect(() => {
-    const fetchEpisodes = async () => {
+    const obtenerEpisodios = async () => {
       try {
-        const response = await fetch('https://rickandmortyapi.com/api/episode');
-        const data = await response.json();
-        setEpisodes(data.results);
-        // Inicialmente, mostramos los personajes de la primera página
-        setCharactersToShow(data.results.slice(0, charactersPerPage));
+        const respuesta = await fetch('https://rickandmortyapi.com/api/episode');
+        const datos = await respuesta.json();
+        setEpisodios(datos.results);
+        // Inicialmente, mostramos los episodios de la primera página
+        setEpisodiosAMostrar(datos.results.slice(0, episodiosPorPagina));
       } catch (error) {
-        console.error('Error fetching episodes:', error);
+        console.error('Error al obtener episodios:', error);
       }
     };
 
-    fetchEpisodes();
-  }, [charactersPerPage]);
+    obtenerEpisodios();
+  }, [episodiosPorPagina]);
 
-  const handlePageChange = (page) => {
-    // Calculamos el índice del primer personaje para la página seleccionada
-    const indexOfFirstCharacter = (page - 1) * charactersPerPage;
-    // Actualizamos los personajes que se deben mostrar según la página seleccionada
-    setCharactersToShow(episodes.slice(indexOfFirstCharacter, indexOfFirstCharacter + charactersPerPage));
-    // Actualizamos la página actual
-    setCurrentPage(page);
+  const cambiarPagina = (pagina) => {
+    const indicePrimerEpisodio = (pagina - 1) * episodiosPorPagina;
+    setEpisodiosAMostrar(episodios.slice(indicePrimerEpisodio, indicePrimerEpisodio + episodiosPorPagina));
+    setPaginaActual(pagina);
   };
 
-  const handleCharacterClick = (character) => {
-    // Configuramos el contenedor de detalles para mostrar los detalles del personaje
-    setDetailsContainer(
-      <div className="details-container">
+  const manejarClickEpisodio = (episodio) => {
+    // Configuramos el contenedor de detalles para mostrar los detalles del episodio
+    setDetallesContenedor(
+      <div className="details-container-video">
         <div>
-          <h2 className='h2'> Episode: {character.name} </h2>
-          <h5 className='h2'>num: {character.episode}</h5>
+          <h2 className='h2'> Episodio: {episodio.name} </h2>
+          <h5 className='h2'>Número: {episodio.episode}</h5>
           <span className='movie-icons'>
-              <i className="fab fa-youtube"></i>
-            </span>
+            <i className="fab fa-youtube"></i>
+          </span>
+          <button type="button" className="boton-favorite" onClick={() => agregarAFavoritos(episodio)}>Agregar a Favoritos</button>
         </div>
       </div>
     );
   };
 
+  const agregarAFavoritos = (episodio) => {
+    if (!favoritos.includes(episodio)) {
+      setFavoritos([...favoritos, episodio]);
+    }
+  };
+
   return (
     <div>
-      <div className="character-container">
-        {charactersToShow.map((character) => (
-          <div
-            key={character.id}
-            className={`character-card`}
-            onClick={() => handleCharacterClick(character)}
-          >
-            <h5>{character.name}</h5>
-            <span className='footer-icons'>
-              <i className="fab fa-youtube"></i>
-            </span>
-          </div>
-        ))}
+      <div className='episodes-favorites-container'>
+        <div className="character-container">
+          {episodiosAMostrar.map((episodio) => (
+            <div
+              key={episodio.id}
+              className={`character-card`}
+              onClick={() => manejarClickEpisodio(episodio)}
+            >
+              <h5>{episodio.name}</h5>
+              <div className='icon-yt'>
+                <span className='footer-icons'>
+                  <i className="fab fa-youtube"></i>
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {detallesContenedor}
+
+        <div className="favorites-container">
+          <FavoriteListEpisode favoritos={favoritos} onAgregarFavorito={(episodio) => setFavoritos(favoritos.filter(fav => fav.id !== episodio.id))} />
+        </div>
       </div>
 
       <Pagination
-        currentPage={currentPage}
-        totalPages={Math.ceil(episodes.length / charactersPerPage)}
-        onPageChange={handlePageChange}
+        currentPage={paginaActual}
+        totalPages={Math.ceil(episodios.length / episodiosPorPagina)}
+        onPageChange={cambiarPagina}
       />
-
-      {detailsContainer}
     </div>
   );
 };
