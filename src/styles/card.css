@@ -5,8 +5,8 @@
 }
 
 .character-card {
-  background-color: #e5e5e5;
-  border: 1px solid #ddd;
+  background-color: rgb(60, 62, 68);
+  border: 1px solid rgb(60, 62, 68);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 20px;
@@ -14,6 +14,7 @@
   text-align: center;
   transition: transform 0.3s ease-in-out;
   width: 200px;
+  color: white;
 }
 
 .character-card:hover {
@@ -28,10 +29,11 @@
 }
 
 .character-card h3 {
-  color: #333;
+  color: white;
   font-size: 1.5rem;
   margin: 0;
 }
+
 
 .character-card p {
   color: #666;
@@ -43,11 +45,29 @@
   padding: 10px 20px; /* Ajusta el relleno según sea necesario */
   font-size: 16px; /* Tamaño de fuente */
   cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-  background-color: #4CAF50; /* Color de fondo del botón */
+  background-color: #5f8f33; /* Color de fondo del botón */
   color: white; /* Color del texto */
   border: none; /* Elimina el borde del botón */
   border-radius: 5px; /* Añade bordes redondeados */
-  transition: background-color 0.3s ease;
+}
+
+.episode-card {
+  background-color: rgb(60, 62, 68);
+  border: 1px solid rgb(60, 62, 68);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  width: 200px;
+  color: white;
+  cursor: pointer;
+}
+
+.episode-card:hover {
+  color: #5f8f33;
+  transform: scale(1.05);
 }
 
 .movie-icons{

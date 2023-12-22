@@ -3,6 +3,7 @@ import Pagination from './Pagination';
 import FavoriteListEpisode from './FavoriteListEpisode';
 import '../styles/card.css';
 import '../styles/favoriteList.css';
+import '../styles/body.css';
 
 const ApiEpisodes = () => {
   const [episodios, setEpisodios] = useState([]);
@@ -63,7 +64,7 @@ const ApiEpisodes = () => {
           {episodiosAMostrar.map((episodio) => (
             <div
               key={episodio.id}
-              className={`character-card`}
+              className={`episode-card`}
               onClick={() => manejarClickEpisodio(episodio)}
             >
               <h5>{episodio.name}</h5>

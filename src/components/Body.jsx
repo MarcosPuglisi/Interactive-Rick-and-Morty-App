@@ -36,14 +36,14 @@ function Body() {
 
       {selectedContainer === "characters" && (
         <>
-          <h1 className="h1">Characters of Rick and Morty</h1>
+          <h1 className="h1b">Characters of Rick and Morty</h1>
           <ApiComponent />
         </>
       )}
 
       {selectedContainer === "episodes" && (
         <>
-          <h1 className="h1">Episodes of Rick and Morty</h1>
+          <h1 className="h1b">Episodes of Rick and Morty</h1>
           <ApiEpisodes />
         </>
       )}

@@ -38,7 +38,7 @@ const Header = () => {
         </nav>
       </div>
       <div className="logo-container">
-        <h1>Character & Episodes Collector</h1>
+        <h1 className='h1h'>Character & Episodes Collector</h1>
         <p>Welcome to the Interactive World of Rick and Morty</p>
       </div>
 

@@ -8,10 +8,10 @@
   max-width: 600px;
   margin: 20px auto;
   padding: 20px;
-  border: 2px solid #ddd;
+  border: 2px solid ;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(to right, rgb(24 96 24), #6ba039, #a6cb49);
+  background: #5f8f33;
   display: flex;
   align-items: center; /* Alinea verticalmente los elementos del contenedor */
 }
@@ -21,10 +21,10 @@
   max-width: 600px;
   margin: 20px auto;
   padding: 20px;
-  border: 2px solid #ddd;
+  border: 2px solid ;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(to right, rgb(24 96 24), #6ba039, #a6cb49);
+  background: #5f8f33;
   display: flex;
   align-items: center; /* Alinea verticalmente los elementos del contenedor */
 }
