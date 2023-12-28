@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import ApiComponent from "./ApiComponent";
-import ApiEpisodes from "./ApiEpisodes";
+import ApiComponent from "../components/Api/ApiComponent";
+import ApiEpisodes from "../components/Api/ApiEpisodes";
 import '../styles/body.css';
 
 function Body() {

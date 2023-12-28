@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/pagination.css';
+import '../../styles/DataView/pagination.css';
 
 const Pagination = ({ currentPage, totalPages, onPageChange }) => {
   const pages = Array.from({ length: totalPages }, (_, index) => index + 1);

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import Pagination from './Pagination';
-import FavoriteListEpisode from './FavoriteListEpisode';
-import '../styles/card.css';
-import '../styles/favoriteList.css';
-import '../styles/body.css';
+import Pagination from '../DataView/Pagination';
+import FavoriteListEpisode from '../FavoriteList/FavoriteListEpisode';
+import '../../styles/Cards/card.css';
+import '../../styles/favoriteList.css';
+import '../../styles/body.css';
 
 const ApiEpisodes = () => {
   const [episodios, setEpisodios] = useState([]);
@@ -40,12 +40,12 @@ const ApiEpisodes = () => {
     setDetallesContenedor(
       <div className="details-container-video">
         <div>
-          <h2 className='h2'> Episodio: {episodio.name} </h2>
-          <h5 className='h2'>Número: {episodio.episode}</h5>
+          <h2 className='h2'> Espisode: {episodio.name} </h2>
+          <h5 className='h2'>Number: {episodio.episode}</h5>
           <span className='movie-icons'>
             <i className="fab fa-youtube"></i>
           </span>
-          <button type="button" className="boton-favorite" onClick={() => agregarAFavoritos(episodio)}>Agregar a Favoritos</button>
+          <button type="button" className="boton-favorite" onClick={() => agregarAFavoritos(episodio)}>Add to Favorites</button>
         </div>
       </div>
     );

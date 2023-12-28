@@ -27,7 +27,7 @@ const Header = () => {
     <header className="header">
       <div className="nav">
         <nav className="nav-container">
-          <ul>
+          <ul className='ul-header'>
             <li type="button" className="boton-Register" onClick={openRegisterModal}>
               Register
             </li>

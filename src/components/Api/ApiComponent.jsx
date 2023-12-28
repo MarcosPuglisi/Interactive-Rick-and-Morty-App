@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import Buscador from './Buscador';
-import Pagination from './Pagination';
-import FavoritesList from './FavoriteList';
-import '../styles/card.css';
-import '../styles/idCard.css';
-import '../styles/favoriteList.css';
+import Buscador from '../DataView/Buscador';
+import Pagination from '../DataView/Pagination';
+import FavoritesList from '../FavoriteList/FavoriteList';
+import '../../styles/Cards/card.css';
+import '../../styles/Cards/idCard.css';
+import '../../styles/favoriteList.css';
 
 const ApiComponent = () => {
   const [characters, setCharacters] = useState([]);
@@ -89,15 +89,23 @@ const ApiComponent = () => {
             <img src={selectedCharacter.image} alt={selectedCharacter.name} />
             <div>
               <h2 className='h2'> Details </h2>
-              <p><b>Name:</b> {selectedCharacter.name}</p>
-              <p><b>Status:</b> {selectedCharacter.status}</p>
-              <p><b>Species:</b> {selectedCharacter.species}</p>
-              <p><b>Gender:</b> {selectedCharacter.gender}</p>
-              <p><b>Origin:</b> {selectedCharacter.origin.name}</p>
-              <p><b>Location:</b> {selectedCharacter.location.name}</p>
-              <button type="button" className="boton-favorite" onClick={handleFavoriteClick}>
-                Add to Favorites
-              </button>
+              <div className='nameData'>
+                <p><b>Name:</b> {selectedCharacter.name}</p>
+                <p><b>Status:</b> {selectedCharacter.status}</p>
+              </div>
+              <div  className='genderData'>
+                <p><b>Species:</b> {selectedCharacter.species}</p>
+                <p><b>Gender:</b> {selectedCharacter.gender}</p>
+              </div>
+              <div  className='locationData'>
+                <p><b>Origin:</b> {selectedCharacter.origin.name}</p>
+                <p><b>Location:</b> {selectedCharacter.location.name}</p>
+              </div>
+              <div  className='buttonData'>
+                <button type="button" className="boton-favorite" onClick={handleFavoriteClick}>
+                  Add to Favorites
+                </button>
+              </div>
             </div>
           </div>
           <div className='favorites-container'>

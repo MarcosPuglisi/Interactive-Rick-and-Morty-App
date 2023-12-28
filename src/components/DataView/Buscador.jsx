@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import '../styles/Buscador.css';
+import '../../styles/DataView/Buscador.css';
 
 function Buscador({ onSearch }) {
     const [searchTerm, setSearchTerm] = useState('');

@@ -16,14 +16,19 @@
   max-width: 600px;
   margin: 20px auto;
   padding: 15px;
-  border: 2px solid ;
+  border: 2px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background: #5f8f33;
-  display: flex;
-  align-items: center;
-  font-weight: bold; 
-  flex-direction: column;
+  color: white;
+  background-color: rgb(60, 62, 68);
+  font-weight: bold;
+  text-align: justify;
+  overflow-y: auto; /* Esto agrega una barra de desplazamiento vertical si es necesario */
+  max-height: 300px;
+}
+
+.listName {
+  color: rgb(158, 158, 158);
 }
 
 .remove-icon {
@@ -34,5 +39,5 @@
 }
 
 .remove-icon:hover {
-  color: #af2424; /* Cambia el color cuando el mouse se acerca */
+  color: #af2424; 
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/favoriteList.css';
+import '../../styles/favoriteList.css';
 
 const FavoritesList = ({ favorites, onRemoveFavorite }) => {
   return (
@@ -7,7 +7,7 @@ const FavoritesList = ({ favorites, onRemoveFavorite }) => {
       <h2 className='h2'>Favorites</h2>
       <ul>
         {favorites.map((character) => (
-          <li key={character.id}>
+          <li className='listName' key={character.id}>
             {character.name}
             <span className="remove-icon" onClick={() => onRemoveFavorite(character)}>
               <i className="fas fa-trash-alt"></i>

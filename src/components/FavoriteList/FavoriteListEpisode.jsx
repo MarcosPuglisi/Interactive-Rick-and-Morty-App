@@ -1,10 +1,10 @@
 import React from 'react';
-import '../styles/favoriteList.css';
+import '../../styles/favoriteList.css';
 
 const FavoriteListEpisode = ({ favoritos, onAgregarFavorito }) => {
     return (
         <div>
-          <h2 className='h2'>Episodios Favoritos</h2>
+          <h2 className='h2'>Episodes Favorites</h2>
           <ul>
             {favoritos.map((episodio) => (
               <li key={episodio.id}>

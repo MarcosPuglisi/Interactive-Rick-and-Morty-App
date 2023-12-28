@@ -17,7 +17,7 @@
     margin: 10px 0;
   }
   
-  ul {
+  .ul-header {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -26,7 +26,7 @@
   }
   
   li {
-    margin-right: 20px; /* Ajusta el espaciado entre los elementos de la lista según tus necesidades */
+    margin-right: 5px; /* Ajusta el espaciado entre los elementos de la lista según tus necesidades */
   }
   
   .boton-Register{
