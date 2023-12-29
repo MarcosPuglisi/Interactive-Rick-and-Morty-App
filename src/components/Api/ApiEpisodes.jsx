@@ -77,6 +77,12 @@ const ApiEpisodes = () => {
           ))}
         </div>
 
+        <Pagination
+        currentPage={paginaActual}
+        totalPages={Math.ceil(episodios.length / episodiosPorPagina)}
+        onPageChange={cambiarPagina}
+      />
+
         {detallesContenedor}
 
         <div className="favorites-container">
@@ -84,11 +90,7 @@ const ApiEpisodes = () => {
         </div>
       </div>
 
-      <Pagination
-        currentPage={paginaActual}
-        totalPages={Math.ceil(episodios.length / episodiosPorPagina)}
-        onPageChange={cambiarPagina}
-      />
+
     </div>
   );
 };
