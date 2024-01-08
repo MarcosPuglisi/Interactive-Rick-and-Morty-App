@@ -4,6 +4,11 @@
     color: black;
     padding: 10px;
     text-align: center;
+    background-image: url('../../public/image/iconRam2.png');
+    background-size: 18% auto;
+    background-position: -1% -43px;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
   }
   
   .h1h {

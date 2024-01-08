@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div className='ecommerce-main'>
-      <div className='header'>
+      <div className='header1'>
         <Header />
       </div>
       <div className='body'>
